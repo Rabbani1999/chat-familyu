@@ -1,0 +1,588 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+
+:root {
+  --main-color1:#ed23ff;
+  --main-color2:#9444df;
+  --contact-from-mat-color:#512da8;
+  --header-background:url(../images/header-background.webp) no-repeat 50% 50%/cover;
+  --bacground-Pattern:url(https://demo.chatnet.oncodes.com/default/static/img/main-bg.png) repeat fixed 50% 50% /320px;
+}
+
+button:active,
+button:focus {
+  outline: 0
+}
+
+* {
+  font-family: Poppins, sans-serif
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px
+}
+
+::-webkit-scrollbar-thumb {
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--main-color1)), to(var(--main-color2)));
+  background: linear-gradient(var(--main-color1), var(--main-color2))
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--main-color1)), to(var(--main-color2)));
+  background: linear-gradient(var(--main-color2), var(--main-color1))
+}
+
+.btn {
+  position: relative;
+  overflow: hidden
+}
+
+.btn:hover .shine {
+  -webkit-transform: skewX(20deg) translateX(500px);
+  transform: skewX(20deg) translateX(500px)
+}
+
+.btn .btn-text {
+  border: 0;
+  height: 100%;
+  color: #fff;
+  background: 0 0;
+  font-weight: 700;
+  -webkit-transition: background .3s linear;
+  transition: background .3s linear;
+  letter-spacing: 2px;
+  border-radius: 10px
+}
+
+.btn .shine {
+  position: absolute;
+  top: 0;
+  left: -70px;
+  height: 100%;
+  width: 20px;
+  background: rgba(255, 255, 255, .4);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  -webkit-transform: skewX(20deg) translateX(0);
+  transform: skewX(20deg) translateX(0)
+}
+
+
+header {
+  font-family: Poppins, sans-serif;
+  color: #e6eaf0;
+  background: url(../images/header-background.webp) no-repeat 50% 50%/cover
+}
+
+header .navbar {
+  background:transparent !important;
+  transition:0.8s;
+  border-bottom: 1px solid rgba(255, 255, 255, .411)
+}
+header .navbar-sticky {
+  background: rgba(0, 0, 0, 0.829) !important;
+    position: fixed;
+    width:100%;
+    top:0px;
+    z-index: 1000;
+}
+
+header .navbar .navbar-brand img {
+  -webkit-filter: drop-shadow(0 2px 1.8px #fff);
+  filter: drop-shadow(0 2px 1.8px #fff)
+}
+
+header .navbar .navbar-collapse .navbar-nav .nav-item {
+  padding: 0 5px
+}
+
+header .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 15px
+}
+
+header .navbar .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+  background: var(--main-color1);
+}
+
+header .navbar .navbar-collapse .navbar-nav .nav-item .signUp {
+  background: 0 0;
+  color: var(--main-color1);
+  border: var(--main-color1) 1px solid;
+  border-radius: 0
+}
+
+header .navbar .navbar-collapse .navbar-nav .nav-item .signUp:hover {
+  background: var(--main-color1);
+  color: #fff;
+  border-color: #fff
+}
+
+header .navbar .navbar-collapse .navbar-nav .nav-item .active {
+  background: var(--main-color1);
+}
+
+header .header-banner .row .a {
+  padding: 160px 0;
+  padding-right: 20px
+}
+
+header .header-banner .row .a h1 {
+  font-weight: bolder;
+  font-size: 50px;
+  margin-bottom: 20px
+}
+
+header .header-banner .row .a p {
+  margin-bottom: 20px
+}
+
+header .header-banner .row .a .button {
+  background: var(--main-color1)
+   !important;
+  border-radius: 20px;
+  -webkit-transition: .5s;
+  transition: .5s
+}
+
+header .header-banner .row .a .button:hover {
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px)
+}
+
+header .header-banner .row .b {
+  padding-top: 20px
+}
+
+section#chatroom_card {
+  background: var(--bacground-Pattern);
+  padding: 2.5rem 0
+}
+
+section#chatroom_card .title h2 {
+  font-weight: bolder
+}
+
+section#chatroom_card .title p {
+  letter-spacing: 3px
+}
+
+section#chatroom_card .My-card {
+  width: 450px;
+  border: 1px solid #b99dd4db;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff;
+  position: relative;
+  margin: 20px;
+  -webkit-transition: .2s;
+  transition: .2s;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer
+}
+section#chatroom_card .ld{
+  transform: translateX(-15%);
+}
+section#chatroom_card .My-card .left-side {
+  width: 35%;
+  -webkit-transition: .5s;
+  transition: .5s;
+  position: relative;
+  z-index: 5
+}
+
+section#chatroom_card .My-card .left-side img {
+  height: 220px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  -webkit-transition: .5s;
+  transition: .5s
+}
+
+section#chatroom_card .My-card .left-side .caption {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  visibility: hidden
+}
+
+section#chatroom_card .My-card .right-side {
+  width: 65%
+}
+
+section#chatroom_card .My-card .right-side .a {
+  background: rgba(163, 59, 248, .61);
+  color: #fff;
+  padding: 10px;
+  text-align: center
+}
+
+section#chatroom_card .My-card .right-side .b {
+  padding: 5px 5px 5px 10px;
+  font-size: 15px;
+  line-height: 16px;
+  text-align: justify;
+  padding-top: 18px
+}
+
+section#chatroom_card .My-card .right-side .c {
+  position: absolute;
+  bottom: 0;
+  padding: 10px
+}
+
+.sheen {
+  position: relative;
+  overflow: hidden;
+  /* margin-top: 100px; */
+  margin-left: auto;
+  /* top: 0px; */
+  left: 50%;
+  padding: 6px 39px;
+  font-weight: 500;
+  font-size: 17px;
+  border-radius: 5px;
+  border: 0;
+  color: white;
+  text-transform: uppercase;
+  box-shadow: -2px 2px 2px #5d0a6d;
+  background-color: #C687FB;;
+  ;
+}
+
+/*        sheen effect      */
+/*This is the base aniamtion*/
+.sheen:after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  background: rgba(255, 255, 255, 0.623);
+  transform: rotateZ(60deg) translate(-5em, 7.5em);
+}
+
+/*This activates the sheen once the button has been hovered*/
+.sheen:hover::after,
+.sheen:focus::after {
+  animation: sheen 0.5s forwards;
+  
+}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(1em, -9em);
+  }
+}
+
+.sheen:active {
+  box-shadow: 0px 0px 0px white;
+  -webkit-box-shadow: inset -2px 2px 2px #ccc;
+  -moz-box-shadow: inset -2px 2px 2px #ccc;
+  box-shadow: inset -2px 2px 2px #ccc;
+  transform: translate(0, 2px);
+  color: #ffffff;
+  background-color: #C687FB;
+}
+
+.sheen:focus {
+  outline: 0;
+}
+
+
+
+#contactusBody{
+  background:var(--bacground-Pattern);
+}
+
+
+section#Contact_form_section .title {
+  padding: 2rem
+}
+
+section#Contact_form_section .title h1 {
+  font-size: 50px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #000
+}
+
+section#Contact_form_section .title img {
+  width: 100px;
+  -webkit-filter: drop-shadow(0 6px 5px #000);
+  filter: drop-shadow(0 6px 5px #000)
+}
+
+section#Contact_form_section .contact_form {
+  background: var(--contact-from-mat-color);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 4rem
+}
+
+section#Contact_form_section .contact_form .row .a img {
+  width: 100%;
+  height: 520px;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+
+section#Contact_form_section .contact_form .row .b {
+  padding: 3rem;
+  font-size: 18px;
+  font-weight: 500
+}
+
+section#Contact_form_section .contact_form .row .b label {
+  color: #fff
+}
+
+section#Contact_form_section .contact_form .row .b .massage textarea {
+  height: 150px;
+  resize: none
+}
+
+section#Contact_form_section .contact_form .row .b button {
+  background: var(--main-color1);
+  display: inherit;
+  margin-left: auto;
+  padding: 10px 25px;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  color: #fff;
+  width: 50%;
+  -webkit-transition: text .6s;
+  transition: text .6s
+}
+
+section#Contact_form_section .contact_form .row .b button:hover {
+  text-align: right;
+  letter-spacing: 7px;
+  -webkit-transition: .5s;
+  transition: .5s
+}
+
+section#aboutus {
+  background: var(--bacground-Pattern);
+  padding: 50px
+}
+
+section#aboutus .title {
+  padding: 2rem
+}
+
+section#aboutus .title h1 {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 50px
+}
+
+section#aboutus .title img {
+  width: 100px;
+  -webkit-filter: drop-shadow(0 6px 5px #000);
+  filter: drop-shadow(0 6px 5px #000)
+}
+
+section#aboutus .desc p {
+  font-weight: 550;
+  font-size: 17px;
+  color: #36454f
+}
+
+@media screen and (max-width:992px) {
+  header .header-banner .row .a {
+    padding: 2rem !important
+  }
+}
+
+@media screen and (max-width:768px) {
+  section#chatroom_card .title {
+    padding: 10px !important;
+    text-align: left !important
+  }
+
+  section#chatroom_card .title h2 {
+    font-weight: 600
+  }
+
+  section#chatroom_card .title p {
+    letter-spacing: 1px
+  }
+
+  section#chatroom_card .My-card .left-side {
+    display: none
+  }
+
+  section#chatroom_card .My-card .right-side {
+    width: 100%;
+    height: 200px
+  }
+
+  section#chatroom_card .My-card .right-side .b {
+    padding: 1rem
+  }
+
+  section#chatroom_card .My-card .right-side .c button {
+        
+        left: 60%;
+  }
+
+  
+  section#aboutus {
+    padding: 10px !important
+  }
+
+  section#aboutus .container .desc p {
+    font-weight: 450
+  }
+
+  section#Contact_form_section .contact_form .row .a img {
+    height: 200px
+  }
+
+  ul.navbar-nav {
+    padding: 20px !important
+  }
+
+  ul.navbar-nav li {
+    margin: 10px 0
+  }
+}
+
+.hero-waves {
+  display: block;
+  width: 100%;
+  height: 60px;
+  position: relative
+}
+
+[class*=col] {
+  padding: 0
+}
+
+.wave1 use {
+  -webkit-animation: move-forever1 10s linear infinite;
+  animation: move-forever1 10s linear infinite;
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s
+}
+
+.wave2 use {
+  -webkit-animation: move-forever2 8s linear infinite;
+  animation: move-forever2 8s linear infinite;
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s
+}
+
+.wave3 use {
+  -webkit-animation: move-forever3 6s linear infinite;
+  animation: move-forever3 6s linear infinite;
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s
+}
+
+@-webkit-keyframes move-forever1 {
+  0% {
+    -webkit-transform: translate(85px, 0);
+    transform: translate(85px, 0)
+  }
+
+  100% {
+    -webkit-transform: translate(-90px, 0);
+    transform: translate(-90px, 0)
+  }
+}
+
+@keyframes move-forever1 {
+  0% {
+    -webkit-transform: translate(85px, 0);
+    transform: translate(85px, 0)
+  }
+
+  100% {
+    -webkit-transform: translate(-90px, 0);
+    transform: translate(-90px, 0)
+  }
+}
+
+@-webkit-keyframes move-forever2 {
+  0% {
+    -webkit-transform: translate(-90px, 0);
+    transform: translate(-90px, 0)
+  }
+
+  100% {
+    -webkit-transform: translate(85px, 0);
+    transform: translate(85px, 0)
+  }
+}
+
+@keyframes move-forever2 {
+  0% {
+    -webkit-transform: translate(-90px, 0);
+    transform: translate(-90px, 0)
+  }
+
+  100% {
+    -webkit-transform: translate(85px, 0);
+    transform: translate(85px, 0)
+  }
+}
+
+@-webkit-keyframes move-forever3 {
+  0% {
+    -webkit-transform: translate(-90px, 0);
+    transform: translate(-90px, 0)
+  }
+
+  100% {
+    -webkit-transform: translate(85px, 0);
+    transform: translate(85px, 0)
+  }
+}
+
+@keyframes move-forever3 {
+  0% {
+    -webkit-transform: translate(-90px, 0);
+    transform: translate(-90px, 0)
+  }
+
+  100% {
+    -webkit-transform: translate(85px, 0);
+    transform: translate(85px, 0)
+  }
+}
+
+@-webkit-keyframes zoom-in-out-button {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+
+  100% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2)
+  }
+}
+
+@keyframes zoom-in-out-button {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+
+  100% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2)
+  }
+}
