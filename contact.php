@@ -96,24 +96,47 @@
                             alt=" chat family image"/>
                     </div>
                     <div class="col-lg-8 b">
-                        <form action="">
+                        <form action="" method="post">
                             <div class="username form-group">
                                 <label for="username">Your name</label>
-                                <input id="username" type="text" class="form-control" placeholder="Enter you name Here"
+                                <input id="username" name="username" type="text" class="form-control" placeholder="Enter you name Here"
                                     required>
                             </div>
                             <div class="email form-group">
                                 <label for="username">Your Email</label>
-                                <input id="username" type="text" class="form-control" placeholder="Enter you Email Here"
+                                <input id="username" name="email" type="text" class="form-control" placeholder="Enter you Email Here"
                                     required>
                             </div>
                             <div class="massage form-group">
                                 <label for="username">Your massage/feedback</label>
-                                <textarea id="username" type="text" class="form-control"
+                                <textarea id="username" name="subject" type="text" class="form-control"
                                     placeholder="Enter you massage Here" required> </textarea>
                             </div>
                             <button type="submit">Send </button>
                         </form>
+                        <?php 
+                        if(!empty($_POST["send"])) {
+                            $name = $_POST["username"];
+                            $email = $_POST["email"];
+                            $subject = $_POST["subject"];
+                            $emailContent = "<p>You have received new email via Contact Form: </p>";
+                            $emailContent .=  "<p><b>Message: </b>" . $_POST["content"] . "</p>";
+                            
+                            if(!empty($_POST["custom_name"][0])) {
+                                $emailContent .= "<p><u>Custom Information:</u></p>";
+                                foreach($_POST["custom_name"] as $k=>$v) {
+                                    $emailContent .=  "<p>" . $_POST["custom_name"][$k] . ": " . $_POST["custom_value"][$k] . "</p>";
+                                }
+                            }
+                            
+                            $toEmail = "syedshahriar57012@gmail.com";
+                            $mailHeaders = "From: " . $name . "<". $email .">\r\n";
+                            if(mail($toEmail, $subject, $emailContent, $mailHeaders)) {
+                                $message = "Your contact information is received successfully.";
+                                $type = "success";
+                            }
+                        }
+                        ?>
                     </div>
                 </div>
             </div>

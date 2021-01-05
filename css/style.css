@@ -399,6 +399,56 @@ section#aboutus .desc p {
   color: #36454f
 }
 
+/* footer start  */
+
+.footer {
+	z-index: -100;
+	position: static;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+  background:url(../images/header-background.webp) , #9370d8;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+	color: white;
+	text-align: center;
+	margin-bottom: -15px;
+	padding: 20px 0;
+}
+.footer a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .footer img {
+    /* width: 40px; */
+    /* height: 40px; */
+    color: #36454f;
+    padding: 15px;
+    margin-top: 30px;
+    /* border: 1px solid; */
+    border-radius: 50%;
+    background: #fff;
+    /* padding-left: ; */
+    margin-left: 24px;
+    -webkit-transition: .5s;
+    transition: .5s;
+    margin-bottom: 20px;
+  }
+.footer img:hover {
+    background: #c51ef4;
+     -webkit-transform: translateY(-10px);
+    transform: translateY(-10px)
+}
+
+
+/* footer start  */
+
+
+
+
+
+
 @media screen and (max-width:992px) {
   header .header-banner .row .a {
     padding: 2rem !important

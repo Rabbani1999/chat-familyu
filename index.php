@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand p-0" href="#">
-                    <img src="images/logo-with-text.svg" alt="logo" >
+                <img width="200px" src="images/logo-with-text.svg" alt=" chat family image"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +43,7 @@
         </nav>
 
 
-        <div class="container">
+        <div class="container" style="">
 
             <!-- navbar end here -->
 
